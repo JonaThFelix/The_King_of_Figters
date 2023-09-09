@@ -1,0 +1,195 @@
+/* O contêiner de cartão flip - defina a largura e a altura como quiser.
+Adicionamos a propriedade border para demonstrar que o próprio flip sai
+da caixa ao passar o mouse (remova a perspectiva se não quiser o efeito 3D */
+
+
+/* -------------------------FORMATANDO O CORPO ----------------------------------------*/
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
+    color: yellow;
+}
+
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: small;
+}
+
+body {
+    background-image: url(./imagem/fundo.png);
+    background-size: 100% 100%;
+    /*imagem ocupa 100% das dimensões Y e X*/
+    background-repeat: no-repeat;
+    /*imagem não repete*/
+    background-attachment: fixed;
+    /*imagem fixada, não rola*/
+    background-position: center;
+    background-clip: padding-box;
+    position: absolute;
+}
+
+.footer{
+    position: absolute;
+    color: rgb(255, 230, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    right: -350%;
+    top: 35%;
+}
+
+
+/* -------------------------FORMATANDO OS CARTÕES ----------------------------------------*/
+.flip-card {
+    margin-top: 15%;
+    margin-left: 15%;
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    padding: 1px;
+    /*espaçamento*/
+    perspective: 1000px;
+    /* Remova isso se não quiser o efeito 3D */
+}
+
+/* Este container é necessário para posicionar a frente e o verso */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Faz um flip horizontal quando você move o mouse sobre o contêiner da caixa flip */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Posiciona frente e verso */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Estilizar o lado da frente (substituir se a imagem estiver faltando) */
+.flip-card-front {
+    background-image: url(./imagem/cenariointerno.gif);
+    /*cor de fundo da imagem tentar por imagem de cenário de fundo*/
+
+}
+
+/* Estilizar o verso */
+.flip-card-back {
+    background-color: rgb(116, 10, 202);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.logo{
+    height: 40%;
+    width: 200%;
+    position: absolute;
+    right: 20%;
+    left: 420%;
+    background-attachment: fixed;
+    background-position: right;
+    background-clip: padding-box;
+}
+/* -------------------------FORMATANDO OS PERSONAGENS ----------------------------------------*/
+
+
+.kyo {
+    position: absolute;
+    right: 90px;
+    width: 150px;
+    height: 150px;
+    top: 23%;
+}
+
+.iori {
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    right: 12%;
+}
+
+.orochi {
+    position: absolute;
+    top: -1%;
+    right: 23%;
+}
+
+.athena{
+    position: absolute;
+    width: 40%;
+    top: 10%;
+    right: 30%;
+}
+
+.kula{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+}
+
+.k2{
+    position: absolute;
+    top: -4%;
+    right: 15%;
+}
+
+.ralf{
+    position: absolute;
+    top: -11%;
+    right: -2%;
+}
+
+.igniz{
+    position: absolute;
+    top: 10%;
+    right: 30%;
+}
+
+.joe{
+    width: 110%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    right: -3%;
+}
+
+.mai{
+    position: absolute;
+    right: -10%;
+    top: -5%;
+}
+
+.andy{
+    position: absolute;
+    top: 20%;
+    right: 10%;
+}
+
+/*  ------------------------- FORMATAÇÃO DAS COLUNAS ----------------------------------------------*/
+.coluna2{
+    position: absolute;
+    right: -110%;
+    top: 0%;
+}
+
+.coluna3{
+    position: absolute;
+    right: -110%;
+    top: 0%;
+}
+

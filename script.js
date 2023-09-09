@@ -1,0 +1,1 @@
+alert("Para melhor visualização abra em um\n\nNotebook ou Computador")
